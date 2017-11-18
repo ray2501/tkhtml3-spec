@@ -60,7 +60,7 @@ rm -rf $RPM_BUILD_ROOT
 make 
 
 %install
-make DESTDIR=%{buildroot} pkglibdir=%{directory}/%{_lib}/tcl/%{name}%{version} install
+make DESTDIR=%{buildroot} pkglibdir=%{tcl_archdir}/%{name}%{version} install
 
 install -d $RPM_BUILD_ROOT{%{_datadir}/hv3,%{_bindir}}
 cp -a hv/*.tcl $RPM_BUILD_ROOT%{_datadir}/hv3
@@ -75,9 +75,7 @@ rm -rf %buildroot
 
 %files
 %defattr(-,root,root)
-%{directory}/%{_lib}/tcl/%{name}%{version}
-%{directory}/%{_lib}/tcl/%{name}%{version}/pkgIndex.tcl
-%{directory}/%{_lib}/tcl/%{name}%{version}/libTkhtml3.0.so
+%{tcl_archdir}/%{name}%{version}
 %{directory}/share/man/mann
 
 %files -n hv3
