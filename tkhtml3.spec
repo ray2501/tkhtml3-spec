@@ -55,7 +55,9 @@ rm -rf $RPM_BUILD_ROOT
 	--mandir=%{directory}/share/man \
 	--with-tcl=%{directory}/%{_lib} \
 	--with-tk=%{directory}/%{_lib} \
+%ifarch x86_64
 	--enable-64bits=yes \
+%endif
 	--enable-threads=yes
 make 
 
