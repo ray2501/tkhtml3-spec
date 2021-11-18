@@ -5,11 +5,11 @@
 Name:          tkhtml3
 Summary:       Tk HTML / CSS rendering widget
 Version:       3.0
-Release:       alpha16.20110119
+Release:       alpha16.20200313
 License:       BSD-3-Clause
 Group:         Development/Libraries/Tcl
-Source:        tkhtml3-alpha-16-20110119.tar.gz
-URL:           http://tkhtml.tcl.tk
+Source:        tkhtml3-alpha-16-20200313.tar.gz
+URL:           https://github.com/olebole/tkhtml3
 BuildRequires: autoconf
 BuildRequires: make
 BuildRequires: tcl-devel >= 8.6
