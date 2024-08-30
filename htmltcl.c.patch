@@ -1,0 +1,14 @@
+--- src/htmltcl.c.orig	2024-08-30 22:07:32.040006487 +0800
++++ src/htmltcl.c	2024-08-30 22:08:37.936816690 +0800
+@@ -500,7 +500,10 @@
+     );
+ 
+     while( pTree->cb.inProgress ) {
+-	usleep( 2000 );
++    struct timespec ts;
++    ts.tv_sec = 2000 / 1000000ul;
++    ts.tv_nsec = (2000 % 1000000ul) * 1000;
++    nanosleep(&ts, NULL);
+     }
+     
+     HtmlCheckRestylePoint(pTree);

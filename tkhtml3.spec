@@ -9,6 +9,7 @@ Release:       alpha16.20200313
 License:       BSD-3-Clause
 Group:         Development/Libraries/Tcl
 Source:        tkhtml3-alpha-16-20200313.tar.gz
+Patch1:        htmltcl.c.patch
 URL:           https://github.com/olebole/tkhtml3
 BuildRequires: autoconf
 BuildRequires: make
@@ -44,6 +45,7 @@ widget.
 
 %prep
 %setup -q -n htmlwidget
+%patch 1
 
 %build
 rm -rf $RPM_BUILD_ROOT
